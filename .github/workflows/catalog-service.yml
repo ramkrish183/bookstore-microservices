@@ -25,6 +25,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: 'maven'
+      - name: set execute permission for mvnw
+        run: chmod +x ./mvnw
 
       - name: Build with maven
         run: ./mvnw -ntp verify
