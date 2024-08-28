@@ -22,7 +22,7 @@ public class ProductController {
 
     @GetMapping
     PagedResult<Product> getProducts(@RequestParam(name = "page", defaultValue = "1") int pageNo) {
-        log.info("Fetching products for page: {}  ", pageNo);
+        log.info(" Fetching products for page: {}  ", pageNo);
         return productService.getProducts(pageNo);
     }
 

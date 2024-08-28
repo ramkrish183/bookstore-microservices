@@ -19,7 +19,7 @@ services:
         limits:
           memory: 500m
   catalog-service:
-    image: ramkrish183/bookstore-catalog-service
+    image: rameshkrishnan183/bookstore-catalog-service
     container_name: catalog-service
     environment:
       - SPRING_PROFILES_ACTIVE=docker
