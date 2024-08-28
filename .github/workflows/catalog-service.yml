@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       working-directory: ./catalog-service
+      DOCKER_IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-catalog-service
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
@@ -43,5 +44,5 @@ jobs:
         name: Build and Publish Docker Image
         run: |
          ./mvnw spring-boot:build-image -DskipTests
-         echo "Pushing the image $DOCKER_IMAGE_NAME and ${{ secrets.DOCKERHUB_USERNAME }} to Docker Hub..."
-         docker push ${{ secrets.DOCKERHUB_USERNAME }}/bookstore-catalog-service
+         echo "Pushing the image $DOCKER_IMAGE_NAME to Docker Hub..."
+         docker push $DOCKER_IMAGE_NAME
