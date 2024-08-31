@@ -18,7 +18,8 @@
 
 
 	<modules>
-	<module>catalog-service</module>
+		<module>catalog-service</module>
+		<module>order-service</module>
 	</modules>
 
 	<build>
