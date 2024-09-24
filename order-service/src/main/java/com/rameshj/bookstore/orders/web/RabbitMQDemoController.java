@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RabbitMQDemoController {
-
+/*
     private final RabbitTemplate rabbitTemplate;
 
     private final ApplicationProperties properties;
@@ -25,5 +25,5 @@ public class RabbitMQDemoController {
 
     record MyMessage (String routingKey, PayLoad payload){}
     record PayLoad(String content){}
-
+*/
 }
