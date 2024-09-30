@@ -1,20 +1,20 @@
 package com.rameshj.bookstore.notifications.events;
+
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.awaitility.Awaitility.await;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
-import java.time.LocalDateTime;
-import java.util.Set;
-import java.util.UUID;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rameshj.bookstore.notifications.AbstractIT;
 import com.rameshj.bookstore.notifications.ApplicationProperties;
 import com.rameshj.bookstore.notifications.domain.models.*;
+import java.time.LocalDateTime;
+import java.util.Set;
+import java.util.UUID;
 import org.junit.jupiter.api.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-
 
 class OrderEventHandlerTests extends AbstractIT {
     @Autowired
