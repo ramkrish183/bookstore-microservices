@@ -1,9 +1,8 @@
 package com.rameshj.bookstore.orders.domain;
 
+import com.rameshj.bookstore.orders.domain.models.*;
 import java.util.List;
 import java.util.Optional;
-
-import com.rameshj.bookstore.orders.domain.models.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -19,7 +18,7 @@ public class OrderService {
 
     private final OrderEventService orderEventService;
 
-    OrderService(OrderRepository orderRepository,OrderValidator orderValidator,  OrderEventService orderEventService) {
+    OrderService(OrderRepository orderRepository, OrderValidator orderValidator, OrderEventService orderEventService) {
         this.orderRepository = orderRepository;
         this.orderValidator = orderValidator;
         this.orderEventService = orderEventService;

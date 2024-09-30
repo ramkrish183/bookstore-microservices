@@ -1,4 +1,5 @@
 package com.rameshj.bookstore.orders.domain;
+
 import com.rameshj.bookstore.orders.domain.models.Address;
 import com.rameshj.bookstore.orders.domain.models.Customer;
 import com.rameshj.bookstore.orders.domain.models.OrderStatus;
@@ -18,6 +19,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.Set;
+
 @Entity
 @Table(name = "orders")
 class OrderEntity {

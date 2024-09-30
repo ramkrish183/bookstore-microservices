@@ -1,11 +1,9 @@
 package com.rameshj.bookstore.orders.domain;
 
-
-import java.util.List;
-import java.util.Optional;
-
 import com.rameshj.bookstore.orders.domain.models.OrderStatus;
 import com.rameshj.bookstore.orders.domain.models.OrderSummary;
+import java.util.List;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,13 +1,14 @@
 package com.rameshj.bookstore.orders.domain;
-import java.util.Set;
 
 import com.rameshj.bookstore.orders.clients.catalog.Product;
 import com.rameshj.bookstore.orders.clients.catalog.ProductServiceClient;
 import com.rameshj.bookstore.orders.domain.models.CreateOrderRequest;
 import com.rameshj.bookstore.orders.domain.models.OrderItem;
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+
 @Component
 class OrderValidator {
     private static final Logger log = LoggerFactory.getLogger(OrderValidator.class);

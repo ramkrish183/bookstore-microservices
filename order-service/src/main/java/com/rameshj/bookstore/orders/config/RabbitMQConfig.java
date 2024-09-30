@@ -29,7 +29,7 @@ class RabbitMQConfig {
 
     @Bean
     Queue newOrdersQueue() {
-        System.out.println("creating queues "+properties.newOrdersQueue());
+        System.out.println("creating queues " + properties.newOrdersQueue());
         return QueueBuilder.durable(properties.newOrdersQueue()).build();
     }
 
@@ -81,8 +81,7 @@ class RabbitMQConfig {
     }
 
     @Bean
-    public RabbitAdmin admin(RabbitTemplate rabbitTemplate){
+    public RabbitAdmin admin(RabbitTemplate rabbitTemplate) {
         return new RabbitAdmin(rabbitTemplate);
     }
-
 }

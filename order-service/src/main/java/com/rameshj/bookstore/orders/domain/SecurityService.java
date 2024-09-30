@@ -6,10 +6,10 @@ import org.springframework.stereotype.Service;
 public class SecurityService {
 
     public String getLoginUserName() {
-         return "user";
-       // JwtAuthenticationToken authentication =
-       //         (JwtAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
-       // Jwt jwt = (Jwt) authentication.getPrincipal();
+        return "user";
+        // JwtAuthenticationToken authentication =
+        //         (JwtAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        // Jwt jwt = (Jwt) authentication.getPrincipal();
         /*
         var username = jwt.getClaimAsString("preferred_username");
         var email = jwt.getClaimAsString("email");
@@ -17,6 +17,6 @@ public class SecurityService {
         var token = jwt.getTokenValue();
         var authorities = authentication.getAuthorities();
         */
-        //return jwt.getClaimAsString("preferred_username");
+        // return jwt.getClaimAsString("preferred_username");
     }
 }

@@ -1,5 +1,7 @@
 package com.rameshj.bookstore.orders.domain.models;
+
 import jakarta.validation.constraints.NotBlank;
+
 public record Address(
         @NotBlank(message = "AddressLine1 is required") String addressLine1,
         String addressLine2,

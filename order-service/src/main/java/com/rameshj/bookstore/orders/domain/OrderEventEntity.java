@@ -1,7 +1,6 @@
 package com.rameshj.bookstore.orders.domain;
 
 import com.rameshj.bookstore.orders.domain.models.OrderEventType;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
