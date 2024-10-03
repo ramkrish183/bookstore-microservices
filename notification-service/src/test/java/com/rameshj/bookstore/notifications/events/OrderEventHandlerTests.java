@@ -26,7 +26,7 @@ class OrderEventHandlerTests extends AbstractIT {
     @Autowired
     ApplicationProperties properties;
 
-    Customer customer = new Customer("Siva", "siva@gmail.com", "999999999");
+    Customer customer = new Customer("Ramesh", "ramesh@google.com", "999999999");
     Address address = new Address("addr line 1", null, "Hyderabad", "TS", "500072", "India");
 
     @Test
