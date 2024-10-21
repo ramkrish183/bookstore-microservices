@@ -17,4 +17,8 @@ class OrderController {
         model.addAttribute("orderNumber", orderNumber);
         return "order_details";
     }
+    @GetMapping("/orders")
+    String showOrders() {
+        return "orders";
+    }
 }
