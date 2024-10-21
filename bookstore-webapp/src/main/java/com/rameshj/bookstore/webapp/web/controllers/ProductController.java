@@ -19,14 +19,15 @@ public class ProductController {
     ProductController(CatalogServiceClient catalogService) {
         this.catalogService = catalogService;
     }
+
     @GetMapping
-    public String index(){
+    public String index() {
         return "redirect:/products";
     }
 
     @GetMapping("/products")
-    String productsPage(Model model, @RequestParam(value = "page",defaultValue = "1") int pageNo){
-        model.addAttribute("pageNo",pageNo);
+    String productsPage(Model model, @RequestParam(value = "page", defaultValue = "1") int pageNo) {
+        model.addAttribute("pageNo", pageNo);
         return "products";
     }
 
@@ -36,5 +37,4 @@ public class ProductController {
         log.info("Fetching products for page: {}", page);
         return catalogService.getProducts(page);
     }
-
 }

@@ -2,14 +2,13 @@ package com.rameshj.bookstore.webapp.web.controllers;
 
 import com.rameshj.bookstore.webapp.clients.orders.*;
 import jakarta.validation.Valid;
+import java.util.List;
+import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Map;
 
 @Controller
 class OrderController {
@@ -30,7 +29,7 @@ class OrderController {
     @ResponseBody
     OrderConfirmationDTO createOrder(@Valid @RequestBody CreateOrderRequest orderRequest) {
         log.info("Creating order: {}", orderRequest);
-        return orderServiceClient.createOrder( orderRequest);
+        return orderServiceClient.createOrder(orderRequest);
     }
 
     @GetMapping("/orders/{orderNumber}")
@@ -43,7 +42,7 @@ class OrderController {
     @ResponseBody
     OrderDTO getOrder(@PathVariable String orderNumber) {
         log.info("Fetching order details for orderNumber: {}", orderNumber);
-        return orderServiceClient.getOrder( orderNumber);
+        return orderServiceClient.getOrder(orderNumber);
     }
 
     @GetMapping("/orders")
@@ -58,9 +57,8 @@ class OrderController {
         return orderServiceClient.getOrders();
     }
 
-
     private Map<String, ?> getHeaders() {
-        //String accessToken = securityHelper.getAccessToken();
+        // String accessToken = securityHelper.getAccessToken();
         return null;
     }
 }

@@ -1,10 +1,9 @@
 package com.rameshj.bookstore.webapp.clients;
 
-import java.time.Duration;
-
 import com.rameshj.bookstore.webapp.ApplicationProperties;
 import com.rameshj.bookstore.webapp.clients.catalog.CatalogServiceClient;
 import com.rameshj.bookstore.webapp.clients.orders.OrderServiceClient;
+import java.time.Duration;
 import org.springframework.boot.web.client.ClientHttpRequestFactories;
 import org.springframework.boot.web.client.ClientHttpRequestFactorySettings;
 import org.springframework.boot.web.client.RestClientCustomizer;

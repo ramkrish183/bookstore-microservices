@@ -12,9 +12,9 @@ public interface OrderServiceClient {
     @PostExchange("/orders/api/orders")
     OrderConfirmationDTO createOrder(
             @RequestHeader Map<String, ?> headers, @RequestBody CreateOrderRequest orderRequest);
+
     @PostExchange("/orders/api/orders")
-    OrderConfirmationDTO createOrder(
-             @RequestBody CreateOrderRequest orderRequest);
+    OrderConfirmationDTO createOrder(@RequestBody CreateOrderRequest orderRequest);
 
     @GetExchange("/orders/api/orders")
     List<OrderSummary> getOrders(@RequestHeader Map<String, ?> headers);
@@ -26,5 +26,5 @@ public interface OrderServiceClient {
     OrderDTO getOrder(@RequestHeader Map<String, ?> headers, @PathVariable String orderNumber);
 
     @GetExchange("/orders/api/orders/{orderNumber}")
-    OrderDTO getOrder( @PathVariable String orderNumber);
+    OrderDTO getOrder(@PathVariable String orderNumber);
 }

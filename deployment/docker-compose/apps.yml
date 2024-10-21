@@ -93,3 +93,16 @@ services:
       resources:
         limits:
           memory: 700m
+
+  bookstore-webapp:
+    image: rameshkrishnan183/bookstore-webapp
+    container_name: api-gateway
+    environment:
+      - BOOKSTORE_API_GATEWAY_URL=http://api-gateway:8989
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 700m
