@@ -1,6 +1,7 @@
 package com.rameshj.bookstore.webapp.web.controllers;
 
 import com.rameshj.bookstore.webapp.clients.orders.*;
+import com.rameshj.bookstore.webapp.services.SecurityHelper;
 import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Map;
@@ -13,10 +14,11 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 class OrderController {
     private static final Logger log = LoggerFactory.getLogger(OrderController.class);
-
+    private final SecurityHelper securityHelper;
     private final OrderServiceClient orderServiceClient;
 
-    OrderController(OrderServiceClient orderServiceClient) {
+    OrderController(SecurityHelper securityHelper, OrderServiceClient orderServiceClient) {
+        this.securityHelper = securityHelper;
         this.orderServiceClient = orderServiceClient;
     }
 
@@ -29,7 +31,7 @@ class OrderController {
     @ResponseBody
     OrderConfirmationDTO createOrder(@Valid @RequestBody CreateOrderRequest orderRequest) {
         log.info("Creating order: {}", orderRequest);
-        return orderServiceClient.createOrder(orderRequest);
+        return orderServiceClient.createOrder(getHeaders(), orderRequest);
     }
 
     @GetMapping("/orders/{orderNumber}")
@@ -42,7 +44,7 @@ class OrderController {
     @ResponseBody
     OrderDTO getOrder(@PathVariable String orderNumber) {
         log.info("Fetching order details for orderNumber: {}", orderNumber);
-        return orderServiceClient.getOrder(orderNumber);
+        return orderServiceClient.getOrder(getHeaders(), orderNumber);
     }
 
     @GetMapping("/orders")
@@ -54,11 +56,11 @@ class OrderController {
     @ResponseBody
     List<OrderSummary> getOrders() {
         log.info("Fetching orders");
-        return orderServiceClient.getOrders();
+        return orderServiceClient.getOrders(getHeaders());
     }
 
     private Map<String, ?> getHeaders() {
-        // String accessToken = securityHelper.getAccessToken();
-        return null;
+        String accessToken = securityHelper.getAccessToken();
+        return Map.of("Authorization", "Bearer " + accessToken);
     }
 }

@@ -96,9 +96,10 @@ services:
 
   bookstore-webapp:
     image: rameshkrishnan183/bookstore-webapp
-    container_name: api-gateway
+    container_name: bookstore-webapp
     environment:
       - BOOKSTORE_API_GATEWAY_URL=http://api-gateway:8989
+      - OAUTH2_SERVER_URL=http://keycloak:9191
     ports:
       - "8080:8080"
     restart: unless-stopped

@@ -1,0 +1,50 @@
+{
+  "realm" : "bookstore",
+  "users" : [ {
+    "id" : "c9067253-17b6-4e2d-956f-610a1547e2f9",
+    "username" : "jeyap",
+    "firstName" : "Jeyaprakash",
+    "lastName" : "Arumugam",
+    "email" : "jeyap@gmail.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1730241398661,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "7fb227aa-44a1-46fc-8530-71cdb11d1ebc",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1730241418870,
+      "secretData" : "{\"value\":\"giLYZll3xwZqFfjFhiq9qKhBbqZXRH+00pu5bE2ar13HKpjVtDLfwt77Dl0xQ2oVVpt4jXyhai4eZsmVVGMNXw==\",\"salt\":\"PQtZVRyfAq/bmXvF7LdxOw==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-bookstore" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "23c45812-c7c5-4589-9718-43b6b168b2fc",
+    "username" : "ramesh",
+    "firstName" : "Ramesh",
+    "lastName" : "Jeyaprakash",
+    "email" : "ramesh@gmail.com",
+    "emailVerified" : true,
+    "createdTimestamp" : 1730241376455,
+    "enabled" : true,
+    "totp" : false,
+    "credentials" : [ {
+      "id" : "3d6eaa76-8a86-4b6a-abbc-34b2e73d8ffe",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1730241433376,
+      "secretData" : "{\"value\":\"j6v4PWSn1oXti63xmvL3zlyZ7uBU9viprtRHi/C3s4qvZWwEDw8Q75GmZCo6TCCTK5QpVNne+2lSyjrrVbUi7Q==\",\"salt\":\"pKMR+ksI9rUQ3xhQ1NOpyA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":210000,\"algorithm\":\"pbkdf2-sha512\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-bookstore" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
